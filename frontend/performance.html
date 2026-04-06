@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>🌿 SmartAir AI</h2>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how.html">How It Works</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="performance.html">Performance</a>
+    </div>
+</nav>
+
+<!-- Content -->
+<section class="info-container">
+
+    <div class="info-card">
+
+        <h2>Model Performance</h2>
+
+        <p>
+            The model was evaluated using standard metrics such as Mean Absolute Error (MAE),
+            Mean Squared Error (MSE), and R² Score.
+        </p>
+
+        <!-- Table -->
+        <table class="performance-table">
+            <tr>
+                <th>Model</th>
+                <th>R² Score</th>
+            </tr>
+            <tr>
+                <td>Linear Regression</td>
+                <td>0.127</td>
+            </tr>
+            <tr>
+                <td>Gradient Boosting</td>
+                <td>0.859</td>
+            </tr>
+            <tr>
+                <td>Decision Tree</td>
+                <td>0.929</td>
+            </tr>
+            <tr>
+                <td><b>Random Forest</b></td>
+                <td><b>0.948</b></td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 20px;">
+            Random Forest achieved the highest accuracy because it handles nonlinear relationships effectively.
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>

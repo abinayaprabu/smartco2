@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f5f8f6);
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2e7d32;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    min-height: 70vh;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 55px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.hero-left h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-left p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-left button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hero-left button:hover {
+    background: #1b5e20;
+    transform: translateY(-3px);
+}
+
+/* Dashboard Card */
+.hero-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    font-size: 24px;
+    color: #2e7d32;
+}
+
+/* Prediction Section */
+.prediction-section {
+    padding: 100px;
+    text-align: center;
+}
+
+.prediction-section h2 {
+    font-size: 36px;
+}
+
+.form-container {
+    margin-top: 40px;
+}
+
+.form-container input {
+    width: 220px;
+    padding: 14px;
+    margin: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #2e7d32;
+    outline: none;
+    box-shadow: 0 0 10px rgba(46,125,50,0.2);
+}
+
+.form-container button {
+    padding: 14px 40px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #1b5e20;
+    transform: translateY(-3px);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 50px;
+    padding: 35px;
+    background: rgba(232,245,233,0.7);
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.result-box:hover {
+    transform: scale(1.02);
+}
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #c8e6c9;
+    border-radius: 50%;
+    right: -150px;
+    top: -100px;
+    z-index: 0;
+}
+
+.hero-left,
+.hero-right {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== NEW STYLING FOR INNER PAGES ONLY ===== */
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.info-card {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Hover */
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Title */
+.info-card h2 {
+    font-size: 38px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.info-card p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* List */
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.info-card li {
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* List hover animation */
+.info-card li:hover {
+    color: #2e7d32;
+    transform: translateX(8px);
+}
+
+/* Table styling (ONLY performance page) */
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.performance-table th {
+    background: #2e7d32;
+    color: white;
+    padding: 12px;
+}
+
+.performance-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.performance-table tr:hover {
+    background: rgba(46,125,50,0.1);
+}
+/* GRID LAYOUT */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* MINI CARDS */
+.mini-card {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Hover effect */
+.mini-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Card titles */
+.mini-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* Card text */
+.mini-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.map-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#map {
+    height: 400px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.map-result {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+
+/* Row layout */
+.map-result-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual card */
+.aq-card {
+    width: 160px;
+    padding: 20px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.aq-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Title */
+.aq-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* Value */
+.aq-card p {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartAir AI</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2>🌿 SmartAir AI</h2>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how.html">How It Works</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="performance.html">Performance</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-left">
+        <h1>Smart CO₂ Level Prediction</h1>
+        <h2>Using Machine Learning</h2>
+        <p>
+            AI-powered indoor air quality monitoring based on 
+            Temperature, Humidity, Light & Occupancy.
+        </p>
+
+        <button onclick="scrollToPredict()">Predict CO₂ Now</button>
+    </div>
+
+    <div class="hero-right">
+        <div class="dashboard-card">
+            <h3>CO₂: <span id="previewCo2">--</span> ppm</h3>
+            <p>Temp: <span id="previewTemp">--</span>°C</p>
+            <p>Humidity: <span id="previewHumidity">--</span>%</p>
+            <p>Occupied: <span id="previewOcc">--</span></p>
+
+            <!-- AQI -->
+            <p>AQI: <span id="aqi">--</span></p>
+            <p>Status: <span id="aqiStatus">--</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- Prediction Section -->
+<section class="prediction-section" id="predictSection">
+
+    <h2>Predict CO₂ Levels</h2>
+
+    <div class="form-container">
+        <input type="number" id="temperature" placeholder="Temperature (15–40 °C)" min="15" max="40">
+        <input type="number" id="humidity" placeholder="Humidity (20–80 %)" min="20" max="80">
+        <input type="number" id="light" placeholder="Light (0–1000 Lux)" min="0" max="1000">
+        <input type="number" id="occupancy" placeholder="Occupancy (0 or 1)" min="0" max="1">
+
+        <button onclick="predictCO2()">Predict CO₂ Level</button>
+    </div>
+
+    <div class="result-box" id="result">
+        Prediction will appear here
+    </div>
+
+</section>
+
+<!-- 🌍 MAP SECTION (NOW AT BOTTOM) -->
+<section class="map-section">
+
+    <h2>Explore Air Quality by Location 🌍</h2>
+
+    <input type="text" id="locationInput" placeholder="Enter District (e.g., Chennai)">
+    <button onclick="searchLocation()">Search</button>
+
+    <div id="map"></div>
+
+    <div class="map-result-cards">
+
+    <div class="aq-card">
+        <h3>🌿 AQI</h3>
+        <p id="mapAqi">--</p>
+    </div>
+
+    <div class="aq-card">
+        <h3>💨 CO</h3>
+        <p id="mapCo">--</p>
+    </div>
+
+    <div class="aq-card">
+        <h3>🌫 PM2.5</h3>
+        <p id="mapPm">--</p>
+    </div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
