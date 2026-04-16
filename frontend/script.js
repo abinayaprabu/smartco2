@@ -40,7 +40,7 @@ function predictCO2() {
         return;
     }
 
-    fetch("https://smartco2-backend.onrender.com/predict", {
+    fetch("http://127.0.0.1:5000/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
