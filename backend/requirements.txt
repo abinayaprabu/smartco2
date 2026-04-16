@@ -1,5 +1,7 @@
-Flask
+flask
 flask-cors
 numpy
 scikit-learn
+twilio
+python-dotenv
 gunicorn
